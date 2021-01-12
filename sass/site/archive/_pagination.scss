@@ -1,0 +1,7 @@
+.pagination {
+  @media screen and (min-width: $size__large) {
+    @include grid-row-start(2);
+    @include grid-column-start(1);
+    @include grid-column-end(4);
+  }
+}

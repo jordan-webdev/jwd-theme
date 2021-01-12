@@ -1,0 +1,71 @@
+.blue-gradient {
+  @include linear-gradient(white 5%, #f2fdfd 100%);
+}
+
+.blue-shadow {
+  box-shadow: 0px 10px 0px -6px #3fbfae;
+}
+
+.block {
+  display: block;
+}
+
+@supports (-webkit-text-stroke: 0.5px white) {
+  .knockout-text {
+    -webkit-text-stroke: 0.5px white;
+    color: transparent;
+
+    &--tertiary {
+      -webkit-text-stroke: 0.4px $color__tertiary;
+      opacity: 0.8;
+    }
+  }
+}
+
+.none {
+  display: none;
+}
+
+.js-none {
+  display: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+//Append this to the body and html when there is a modal to prevent body scrolling
+
+.scroll-blocker {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.fa {
+  transition: transform 0.15s;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.post-edit-link {
+  margin-top: rem(15);
+  margin-left: rem(15);
+  display: block;
+}
+
+// Lazy Loading
+/*img[data-lazy-type="image"] {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+
+  &.lazy-loaded {
+    opacity: 1;
+  }
+}
+
+.lazy-hidden, .entry img.lazy-hidden, img.thumbnail.lazy-hidden {
+  background-color: transparent !important;
+}*/

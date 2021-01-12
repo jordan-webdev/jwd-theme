@@ -1,0 +1,19 @@
+.main-popup {
+  .layout {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(black, .8);
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+  }
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}

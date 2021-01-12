@@ -1,0 +1,43 @@
+.is-mega.type-a {
+  > .sub-menu {
+    /* Mega Menu */
+    padding: 35px 45px;
+    @include grid;
+    grid-auto-columns: minmax(180px, 300px);
+    @include column-gap(60px);
+
+    > .menu-item {
+      /* Column*/
+      @include grid-row-start(1);
+
+      > a {
+        /* Column header*/
+        display: block;
+        font-family: $font__secondary;
+        line-height: 2;
+        font-size: 19px;
+        padding-bottom: 12px;
+        margin-bottom: 13px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+      .sub-menu {
+        /* Column items*/
+
+        .menu-item {
+          margin-bottom: 6px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        a {
+          /* Column Links*/
+          font-family: $font__primary;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

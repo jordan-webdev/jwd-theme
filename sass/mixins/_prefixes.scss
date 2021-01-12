@@ -1,0 +1,71 @@
+@mixin animation($arg) {
+  -webkit-animation: $arg;
+  animation: $arg;
+}
+
+@mixin animation-delay($arg) {
+  -webkit-animation-delay: $arg;
+  animation-delay: $arg;
+}
+
+@mixin animation-direction($arg) {
+  -webkit-animation-direction: $arg;
+  animation-direction: $arg;
+}
+
+@mixin animation-duration($arg) {
+  -webkit-animation-duration: $arg;
+  animation-duration: $arg;
+}
+
+@mixin animation-fill-mode($arg) {
+  -webkit-animation-fill-mode: $arg;
+  animation-fill-mode: $arg;
+}
+
+@mixin animation-iteration-count($arg) {
+  -webkit-animation-iteration-count: $arg;
+  animation-iteration-count: $arg;
+}
+
+@mixin animation-name($arg) {
+  -webkit-animation-name: $arg;
+  animation-name: $arg;
+}
+
+@mixin animation-timing-function($arg) {
+  -webkit-animation-timing-function: $arg;
+  animation-timing-function: $arg;
+}
+
+@mixin appearance($arg) {
+  -webkit-appearance: $arg;
+  -moz-appearance: $arg;
+  appearance: $arg;
+}
+
+@mixin clip-path($arg) {
+  -webkit-clip-path: $arg;
+  clip-path: $arg;
+}
+
+@mixin perspective($arg) {
+  -webkit-perspective: $arg;
+  perspective: $arg;
+}
+
+@mixin transform($arg) {
+  -webkit-transform: $arg;
+  -ms-transform: $arg;
+  transform: $arg;
+}
+
+@mixin transition($arg) {
+  -webkit-transition: $arg;
+  transition: $arg;
+}
+
+@mixin filter($arg) {
+  -webkit-filter: $arg;
+  filter: $arg;
+}

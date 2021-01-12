@@ -1,0 +1,50 @@
+.category-sidebar {
+  /*border-bottom: rem(1) solid $color__grey;*/
+  padding-bottom: rem(25);
+  margin-bottom: rem(10);
+  height: 100%;
+
+  @media screen and (min-width: $size__medium) {
+    padding-right: rem(15);
+    padding-bottom: rem(0);
+    margin-bottom: rem(0);
+    border-right: rem(1) solid $color__grey;
+    /*border-bottom: none;*/
+  }
+
+  @media screen and (min-width: $size__large) {
+    padding-right: rem(25);
+  }
+
+  .title {
+    font-family: $font__secondary;
+    font-size: rem(36);
+    margin-bottom: rem(15);
+    font-weight: 400;
+  }
+
+  .item {
+    border-bottom: rem(1) solid $color__grey;
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    padding-left: rem(10);
+    font-size: rem(15);
+  }
+
+  .checklist {
+    margin-top: rem(25);
+
+    @media screen and (min-width: $size__medium) {
+      margin-top: rem(65);
+    }
+  }
+
+  .img {
+    margin-top: rem(10);
+    margin-bottom: rem(25);
+  }
+
+  .btn {
+    font-size: rem(14);
+  }
+}

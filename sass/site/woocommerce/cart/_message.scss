@@ -1,0 +1,17 @@
+.page-id-80 {
+  .woocommerce-message, .woocommerce-info, .woocommerce-error {
+    width: 100%;
+  }
+
+  .js-cart-msg {
+    color: red;
+    margin-top: rem(15);
+    font-size: rem(14);
+    display: none;
+    line-height: 1.35;
+
+    &.active {
+      display: block;
+    }
+  }
+}

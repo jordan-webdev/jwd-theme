@@ -1,0 +1,144 @@
+body.woocommerce-cart table.table {
+  border: none;
+  border-top: rem(3) solid $color__primary;
+  border-radius: 0;
+
+  .head {
+  }
+
+  .head-item {
+    color: $color__primary;
+    padding-top: rem(13);
+    padding-bottom: rem(13);
+
+    @media screen and (min-width: $size__large) {
+      padding-top: rem(20);
+      padding-bottom: rem(20);
+    }
+  }
+
+  td {
+    padding-top: rem(13);
+    padding-bottom: rem(13);
+    vertical-align: top;
+
+    @media screen and (min-width: $size__large) {
+      padding-top: rem(20);
+      padding-bottom: rem(20);
+    }
+  }
+
+  .product-item {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    @include align-items(center);
+
+    @media screen and (min-width: 768px) {
+      @include align-items(flex-start);
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .thumb-wrap {
+    margin-right: rem(15);
+
+    @media screen and (min-width: $size__large) {
+      margin-right: rem(25);
+    }
+  }
+
+  .thumb {
+    width: auto;
+    max-width: rem(110);
+  }
+
+  .title {
+    font-size: rem(16);
+  }
+
+  .subtotal {
+    position: relative;
+  }
+
+  .product-remove {
+    position: relative;
+    right: 0;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      bottom: rem(20);
+    }
+
+    .remove {
+      @include flexbox;
+      @include justify-content(flex-end);
+      @include align-items(flex-end);
+      padding: rem(7);
+      width: rem(35);
+      height: auto;
+      margin-left: auto;
+      background: transparent !important;
+      color: $color__med-grey !important;
+
+      @media screen and (min-width: 768px) {
+        width: auto;
+        margin-left: 0;
+        @include justify-content(center);
+        @include align-items(center);
+      }
+    }
+  }
+
+  .actions-inner {
+    text-align: left;
+    @include flexbox;
+    @include flex-direction(column);
+
+    @media screen and (min-width: $size__medium) {
+      @include flex-direction(row);
+      @include justify-content(space-between);
+    }
+
+    .wrap-1 {
+      @include flexbox;
+      @include flex-direction(column);
+    }
+  }
+
+  .coupon {
+    margin-bottom: rem(15);
+    @include flexbox;
+
+    .coupon-input {
+      height: rem(46);
+      margin-right: rem(10);
+      min-width: rem(112);
+      max-width: rem(112);
+    }
+
+    .button {
+      width: auto !important;
+      margin-right: rem(0);
+    }
+  }
+
+  .continue-shopping {
+    font-size: rem(14);
+
+    .fa {
+      margin-right: rem(5);
+    }
+  }
+
+  .update-btn {
+    display: inline-block;
+    width: auto;
+    background-color: transparent;
+    border: rem(1) solid $color__primary;
+  }
+}

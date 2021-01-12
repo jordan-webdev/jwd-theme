@@ -1,0 +1,36 @@
+.is-mega {
+  position: relative;
+
+  &:hover {
+    > .sub-menu {
+      left: -19px;
+    }
+  }
+
+  > .sub-menu {
+    position: absolute;
+    left: -9999px;
+    top: 100%;
+  }
+
+  &.width-full {
+    position: static;
+
+    &:hover {
+      > .sub-menu {
+        left: 0;
+      }
+    }
+
+    > .sub-menu {
+      width: 100%;
+    }
+  }
+
+  .menu-icon {
+    display: block;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

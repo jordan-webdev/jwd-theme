@@ -1,0 +1,41 @@
+$medium: rem(575);
+
+.wpsl-input, .wpsl-select-wrap {
+  white-space: nowrap;
+}
+
+.wpsl-dropdown .wpsl-selected-item, .wpsl-dropdown li, .wpsl-selected-item {
+  padding: 4px 12px !important;
+}
+
+#wpsl-search-wrap .wpsl-input input {
+  height: rem(35);
+}
+
+#wpsl-search-btn {
+  padding: 4px 10px;
+}
+
+.wpsl-search {
+  padding: 12px;
+}
+
+.wpsl-dropdown {
+  height: rem(35);
+  @include flexbox;
+  @include align-items(center);
+}
+
+#wpsl-category, .wpsl-input, .wpsl-select-wrap {
+  margin-bottom: 0;
+}
+
+#wpsl-search-wrap .wpsl-input input {
+  @media screen and (max-width: $medium) {
+    display: block;
+  }
+}
+
+#wpsl-search-wrap div label {
+  width: auto;
+}

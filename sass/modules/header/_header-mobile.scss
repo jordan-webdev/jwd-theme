@@ -1,0 +1,39 @@
+.header-mobile {
+  padding-top: 15px;
+  padding-bottom: 18px;
+
+  @media screen and (min-width: $breakpoint__mobile-menu) {
+    display: none;
+  }
+
+  .menu {
+    width: 100%;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+
+    @media screen and (min-width: $breakpoint__mobile-menu) {
+      display: none;
+    }
+  }
+
+  .icons {
+    @include flexbox;
+    @include align-items(center);
+  }
+
+  .icon-wrap {
+    padding: 0;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .logo {
+    img {
+      display: block;
+    }
+  }
+}

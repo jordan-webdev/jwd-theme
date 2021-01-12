@@ -1,0 +1,26 @@
+.archive {
+  @import "search";
+
+  .archive-content-wrap {
+    @media screen and (min-width: $size__large) {
+      @include grid;
+      @include grid-template-rows(auto auto);
+      @include grid-template-columns(auto 1fr 809px);
+    }
+
+    &.faq-content-wrap {
+      padding-top: $comm_padd;
+      padding-bottom: $comm_padd;
+
+      @media screen and (min-width: $size__large) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        @include grid-template-columns(198px minmax(20px, 42px) 1fr);
+      }
+    }
+  }
+  @import "filters";
+  @import "results";
+  @import "accordions";
+  @import "pagination";
+}

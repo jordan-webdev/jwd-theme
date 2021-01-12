@@ -1,0 +1,51 @@
+.colour-link, .menu-item a {
+  &:hover, &:focus {
+    color: $color__highlight;
+  }
+}
+
+.current-menu-item a {
+  color: $color__highlight;
+
+  &:visited {
+    color: $color__highlight;
+  }
+}
+
+.is-current {
+  color: $color__highlight;
+
+  &:visited, &:hover, &:focus, &:active {
+    color: $color__highlight;
+  }
+}
+
+.is-current-parent, .current-menu-parent {
+  color: $color__highlight;
+
+  &:visited, &:hover, &:focus, &:active {
+    color: $color__highlight;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:visited {
+    /*color: $color__link-visited;*/
+    color: inherit;
+  }
+
+  &:hover, &:focus, &:active {
+    /*color: $color__link-hover;*/
+  }
+
+  &:focus {
+    /*outline: thin dotted;*/
+  }
+
+  &:hover, &:active {
+    /*outline: 0;*/
+  }
+}

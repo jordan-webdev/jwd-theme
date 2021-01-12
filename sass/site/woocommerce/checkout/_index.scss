@@ -1,0 +1,5 @@
+body.woocommerce-checkout.page-template-default #page {
+  @import "headings";
+  @import "customer-details";
+  @import "order-review";
+}

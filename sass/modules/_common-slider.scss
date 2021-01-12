@@ -1,0 +1,31 @@
+.common-slider {
+  .slick-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    @include transform(translate(-50%, 0%));
+    @include flexbox;
+
+    li {
+      margin-right: 13px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.slick-active button {
+        background-color: #fbfbfb;
+      }
+    }
+
+    button {
+      font-size: 0;
+      width: 17px;
+      height: 17px;
+      border: 1px solid #fbfbfb;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: 0 0 18px #828282;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.cart-collaterals {
+  @media screen and (min-width: $size__large) {
+    padding-left: rem(15);
+  }
+
+  .cart_totals {
+    background-color: $color__grey;
+    padding: rem(15);
+    width: auto;
+    float: none;
+
+    @media screen and (min-width: $size__medium) {
+      max-width: rem(321);
+    }
+
+    @media screen and (min-width: $size__large) {
+      padding: rem(30);
+      width: 95%;
+    }
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-family: $font__secondary;
+    margin-bottom: 8px;
+    font-size: 19px;
+    color: $color__black;
+
+    @media screen and (min-width: $size__large) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .shop_table {
+    border: none;
+
+    th {
+      padding-left: rem(0);
+      font-family: $font__secondary;
+    }
+
+    &.shop_table_responsive tr:nth-child(2n) td {
+      /* Prevent Zebra stripe pattern in cart totals */
+      background-color: transparent;
+    }
+  }
+
+  button.button {
+    color: white;
+    background-color: $color__highlight;
+  }
+
+  .order-total {
+    text-transform: uppercase;
+
+    & > * {
+      border-top: 1px solid black;
+      padding-top: 15px;
+    }
+
+    .amount {
+      font-weight: 400;
+    }
+  }
+
+  .wc-proceed-to-checkout {
+    margin-bottom: 0;
+
+    a.checkout-button {
+      background-color: $color__highlight;
+      margin-bottom: 0;
+
+      &.disabled {
+        opacity: .3;
+        cursor: disabled;
+      }
+    }
+  }
+}

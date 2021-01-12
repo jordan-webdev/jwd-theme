@@ -1,0 +1,24 @@
+.copyright {
+  font-size: 10px;
+  color: white;
+
+  .copyright-text {
+    text-align: center;
+  }
+
+  span {
+    display: block;
+
+    @media screen and (min-width: $size__large) {
+      display: inline;
+    }
+  }
+
+  .line-text {
+    display: block;
+
+    @media screen and (min-width: $size__large) {
+      display: inline;
+    }
+  }
+}

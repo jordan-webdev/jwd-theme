@@ -1,0 +1,62 @@
+.menu .list > .menu-item:not(.is-mega) {
+  /* Regular pullout menus*/
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    .sub-menu {
+      left: -19px;
+    }
+  }
+
+  .sub-menu {
+    position: absolute;
+    left: -9999px;
+    top: 100%;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 13px 19px;
+
+    .menu-item {
+      white-space: nowrap;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.menu .list > .menu-item {
+  /* All menu items, including those containing Mega Menus */
+
+  &:hover {
+    > a::before {
+      display: block;
+    }
+  }
+
+  > a {
+    position: relative;
+
+    &::before {
+      /* Triangle*/
+      content: '';
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      @include transform(translate(-50%, 0));
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-bottom: 10px solid white;
+    }
+  }
+}
+
+.sub-menu {
+  /* All sub menus, including Mega Menus */
+  background-color: white;
+  color: black;
+}

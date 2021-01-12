@@ -1,0 +1,19 @@
+.main-slider {
+  margin-top: -103px;
+  position: relative;
+  height: 80vh;
+
+  .img, .vid {
+    @include object-cover();
+  }
+
+  .nav-btn {
+    &::before, &::after {
+      content: "";
+    }
+
+    .icon {
+      @include flex-shrink(0);
+    }
+  }
+}

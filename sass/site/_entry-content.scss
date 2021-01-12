@@ -1,0 +1,49 @@
+/* Separate styling for dynamic post content */
+
+.entry-content {
+  font-size: px-to(rem, 15);
+  line-height: 1.7;
+
+  & ul:not([class]), ol:not([class]) {
+    padding-left: px-to(em, 40);
+    margin: 1em 0;
+  }
+
+  & li:not([class]) {
+    display: list-item;
+  }
+
+  & a:not([class]) {
+    text-decoration: underline;
+  }/*& > p {
+    max-width: rem(930);
+  }*/
+
+  & h2:not([class]) {
+    color: #002656;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: -.25px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  & p:not([class]) {
+    margin-bottom: 1em;
+  }
+
+  & address:not([class]) {
+    margin: 0 0 1.5em;
+    font-style: italic;
+  }
+}
+
+.wp-block-column {
+  @include flex-grow(1);
+}
+
+.entry-footer {
+  border-top: 1px solid $color__med-grey;
+  padding-top: rem(15);
+  margin-top: rem(15);
+}

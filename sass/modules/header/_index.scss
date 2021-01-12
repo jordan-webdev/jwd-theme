@@ -1,0 +1,18 @@
+@import "var";
+@import "mixins";
+
+.site-header {
+  position: relative;
+  z-index: 2;
+  @import "bottom-bar";
+  @import "header-mobile";
+  @import "middle-bar";
+  @import "nav-desktop";
+  @import "side-slider";/*@import "sticky-nav";*/
+  @import "top-bar";
+
+  @media screen and (min-width: $breakpoint__mobile-menu) {
+    @import "sub-menus";
+	@import "mega-menu/index";
+  }
+}

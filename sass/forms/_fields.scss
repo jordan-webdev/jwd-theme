@@ -1,0 +1,63 @@
+input[type="text"], input[type="email"], input[type="url"],
+input[type="password"], input[type="search"], input[type="number"],
+input[type="tel"], input[type="range"], input[type="date"], input[type="month"],
+input[type="week"], input[type="time"], input[type="datetime"],
+input[type="datetime-local"], input[type="color"], textarea, select,
+.input-style, .date-picker {
+  color: #000;
+  height: 55px;
+  padding: 10px 21px 0;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+
+  &.wpcf7-not-valid {
+    border: 1px solid red;
+  }
+
+  &:focus {
+    /*border: 1px dotted $color__focus;*/
+  }
+
+  &:hover {
+    /*background-color: white;*//*color: $color__text-input;*/
+  }
+}
+
+.float-label {
+  padding-left: 21px;
+}
+
+.common-select {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 9px solid #656976;
+  }
+}
+
+select {
+  /*padding-right: 56px;*/
+  padding-right: 35px;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+textarea {
+  padding-top: 15px;
+  min-height: 177px;
+}
+
+input[type="submit"] {
+  -webkit-appearance: button;
+}
+
+select {
+  cursor: pointer;
+}

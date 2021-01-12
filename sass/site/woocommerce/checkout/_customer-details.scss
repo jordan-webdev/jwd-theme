@@ -1,0 +1,8 @@
+#customer_details {
+  position: relative;
+  margin-bottom: 10px;
+
+  @media screen and (min-width: $size__large) {
+    margin-bottom: $comm_padd;
+  }
+}

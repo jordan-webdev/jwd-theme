@@ -1,0 +1,14 @@
+.side-items {
+  &__item {
+    &:first-child {
+      @include flex-shrink(0);
+
+      margin-right: rem(14);
+    }
+
+    & h2, & h3 {
+      line-height: 1;
+      margin-bottom: rem(5);
+    }
+  }
+}

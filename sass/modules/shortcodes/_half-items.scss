@@ -1,0 +1,13 @@
+.half-items {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+
+  &__item {
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint__half-items) {
+      width: 48%;
+    }
+  }
+}

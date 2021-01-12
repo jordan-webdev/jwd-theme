@@ -1,0 +1,171 @@
+$header_height: rem(144);
+$larger_than_video: rem(1600);
+
+@keyframes loader-out {
+  0% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    left: -999rem;
+  }
+}
+
+.video-slider {
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+
+  .slide {
+    opacity: 0;
+    transition: opacity .6s, left 0s .6s;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: -99999px;
+    width: 100%;
+    height: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(flex-end);
+
+    @media screen and (min-width: $size__large) {
+      @include justify-content(center);
+    }
+
+    &.active {
+      opacity: 1;
+      left: 0;
+      transition: opacity .6s, left 0s;
+    }
+
+    .video {
+      object-fit: cover;
+      font-family: 'object-fit: cover;';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      @include transform(scale(1.1));
+      transition: transform .6s ease-out;
+
+      &.active {
+        @include transform(scale(1));
+      }
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      margin-bottom: rem(128);
+
+      @media screen and (min-width: $size__large) {
+        margin-bottom: rem(0);
+      }
+    }
+
+    .title {
+      font-family: Cormorant;
+      font-weight: 300;
+      $map: (320px: 37px, 700px: 51px, 1050px: 62px, 1200px: 75px);
+      @include poly-fluid-sizing("font-size", $map);
+      $map: (320px: 39px, 700px: 53px, 1050px: 64px, 1200px: 77px);
+      @include poly-fluid-sizing("line-height", $map);
+      @include filter(blur(5px));
+      @include transform(scale(1.5));
+      opacity: 0;
+      transition: filter .3s ease-out .75s, transform .3s ease-out .75s, opacity 0s .75s;
+      /*border-bottom: 1px solid darken(white, 5%);*//*$map: (320px: 15px, 700px: 20px, 1050px: 22px, 1200px: 25px);*//*@include poly-fluid-sizing("padding-bottom", $map);*//*Ensure border only covers the text*//**/
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      /*Overlap the dropdown items*/
+
+      &.active {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+      }
+    }
+
+    .text {
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity .3s 1.25s;
+      padding-left: 15px;
+      padding-right: 15px;
+      line-height: 24px;
+      /*Overlap the dropdown items*/
+      $map: (320px: 15px, 700px: 20px, 1050px: 22px, 1200px: 25px);
+      @include poly-fluid-sizing("padding-top", $map);
+      @include poly-fluid-sizing("padding-bottom", $map);
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .nav {
+    @include flexbox;
+    position: absolute;
+    z-index: 1;
+    bottom: rem(34);
+    left: 50%;
+    @include transform(translate(-50%, 0%));
+
+    @media screen and (min-width: $size__large) {
+      bottom: rem(75);
+    }
+  }
+
+  .nav-item {
+    position: relative;
+    width: rem(54);
+    height: rem(54);
+    border-radius: 50%;
+    background-color: rgba(black, .3);
+    margin-right: rem(31);
+
+    &:last-child {
+      margin-right: rem(0);
+    }
+
+    &.active, &:hover {
+      background-color: rgba(black, .6);
+    }
+  }
+
+  .nav-btn {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    .layout {
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);
+    }
+  }
+
+  .nav-progress-bar {
+    position: absolute;
+    top: rem(-3);
+    bottom: rem(-3);
+    left: rem(-3);
+    right: rem(-3);
+  }
+}

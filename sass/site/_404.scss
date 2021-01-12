@@ -1,0 +1,17 @@
+.error-404 {
+  text-align: center;
+
+  .entry-title {
+    margin-top: 20px;
+  }
+
+  .visit-home-page {
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 35px;
+
+    @media screen and (min-width: $size__large) {
+      margin-bottom: 100px;
+    }
+  }
+}

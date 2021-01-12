@@ -1,0 +1,43 @@
+.search {
+  padding-top: $comm_padd;
+  margin-bottom: 13px;
+
+  @media screen and (min-width: $size__large) {
+    padding-top: 65px;
+    margin-bottom: 22px;
+  }
+
+  .site-container {
+    @include flexbox;
+    @include justify-content(flex-end);
+  }
+
+  .form {
+    height: 33px;
+    @include flexbox;
+    @include align-items(center);
+  }
+
+  label {
+    margin-right: 12px;
+  }
+
+  input[type="text"] {
+    height: 100%;
+    width: 176px;
+    border: 1px solid #e1e1e1;
+    color: inherit;
+    background-color: transparent;
+  }
+
+  .submit {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    height: 100%;
+    width: 89px;
+    color: white;
+    background-color: $color__highlight;
+    padding: 0;
+  }
+}

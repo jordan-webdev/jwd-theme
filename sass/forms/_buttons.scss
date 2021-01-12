@@ -1,0 +1,31 @@
+input[type="submit"] {
+  border: 0;
+  cursor: pointer;
+}
+
+.common-btn {
+  padding-left: 45px;
+  padding-right: 45px;
+  height: 38px;
+  @include flexbox;
+  @include align-items(center);
+  border-radius: 20px;
+  background-color: $color__highlight;
+  color: white;
+  font-size: 14px;
+  text-transform: none;
+  white-space: nowrap;
+
+  &:visited {
+    color: white;
+  }
+
+  &.common-btn--b {
+    background-color: white;
+    color: $color__highlight;
+
+    &:visited {
+      color: $color__highlight;
+    }
+  }
+}

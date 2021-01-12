@@ -1,0 +1,70 @@
+.contact-form {
+  .row {
+    margin-bottom: 16px;
+    @include flexbox;
+    @include justify-content(space-between);
+  }
+
+  .col {
+    width: 48.5%;
+
+    &.full {
+      width: 100%;
+    }
+  }
+
+  .submit {
+    height: 52px;
+    width: 222px;
+    border: 1px solid rgba(175, 0, 0, .48);
+    background-color: transparent;
+    color: #af0000;
+    font-family: $font__secondary;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+}
+
+/* === CF7 Fixes === */
+
+.contact-form .wpcf7-list-item.none {
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  display: none !important;
+}
+
+div.wpcf7-response-output {
+  margin: 0;
+  color: black;
+  background-color: $color__secondary;
+  position: relative;
+  z-index: 7;
+  text-align: right;
+  padding-bottom: .9375rem;
+  padding-top: rem(15);
+  padding-right: rem(15);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: none;
+  border-top: 3px solid $color__primary;
+}
+
+div.wpcf7-validation-errors {
+  border: none;
+  border-top: 3px solid $color__quaternary;
+}
+
+.contact-form .wpcf7-form-control-wrap.services {
+  margin-bottom: 0;
+}
+
+div.wpcf7 .ajax-loader {
+  background-image: url('/wp-content/themes/jwd-master/images/ajax-loader.gif');
+  height: rem(25);
+  width: rem(25);
+}

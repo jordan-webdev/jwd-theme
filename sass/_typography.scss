@@ -1,0 +1,113 @@
+/*Typography*/
+
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/poppins/Poppins-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/poppins/Poppins-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/poppins/Poppins-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/poppins/Poppins-Bold.ttf);
+  font-weight: bold;
+}
+$main_font: $font__primary;
+
+body, button, input, select, textarea {
+  color: $color__primary;
+  font-family: $main_font;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  /*letter-spacing: 0.25px;*//*line-height: 24px;*/
+}
+
+/* Headings*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font__secondary;
+  line-height: 1.2;
+
+  @media screen and (min-width: $size__large) {
+    text-align: center;
+  }
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+
+  @media screen and (min-width: $size__large) {
+    font-size: 50px;
+  }
+}
+
+h2, .common-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 14px;
+
+  @media screen and (min-width: $size__large) {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/*Copy*/
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+address {
+  margin: 0;
+  font-style: normal;
+}
+
+pre {
+  background: #eee;
+  font-family: $main_font;
+  font-size: 14px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code, kbd, tt, var {
+  font-family: $main_font;
+  font-size: 14px;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}

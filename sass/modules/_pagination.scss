@@ -1,0 +1,33 @@
+.pagination {
+  position: relative;
+  z-index: 2;
+  @include grid;
+  @include grid-template-rows($comm_padd auto $comm_padd);
+  @include grid-template-columns(minmax(20px, 1fr) auto minmax(20px, 1fr));
+
+  @media screen and (min-width: $size__large) {
+    @include grid-template-rows(58px auto 112px);
+    @include grid-template-columns(minmax(20px, 1fr) minmax(1px, $comm_container) minmax(20px, 1fr));
+  }
+
+  .list {
+    @include grid-row-start(2);
+    @include grid-column-start(2);
+    @include flexbox;
+    @include justify-content(center);
+  }
+
+  .btn {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e1e1e1;
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    font-size: 14px;
+
+    &.active {
+      background-color: #eee;
+    }
+  }
+}

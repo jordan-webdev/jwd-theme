@@ -1,0 +1,22 @@
+:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+
+  & + label {
+    opacity: .3;
+    cursor: not-allowed;
+  }
+}
+
+.variation {
+  @include grid;
+  @include grid-template-columns(auto 1fr);
+
+  dd {
+    margin-left: 10px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

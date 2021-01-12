@@ -1,0 +1,16 @@
+.inner-hero {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (min-width: $size__large) {
+    height: 431px;
+  }
+
+  .title {
+  }
+
+  img {
+    @include object-cover();
+  }
+}

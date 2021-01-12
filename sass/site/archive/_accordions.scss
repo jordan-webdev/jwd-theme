@@ -1,0 +1,25 @@
+.accordions {
+  @media screen and (min-width: $size__large) {
+    @include grid-column-start(3);
+  }
+
+  .item {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

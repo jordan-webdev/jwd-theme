@@ -1,0 +1,38 @@
+.is-mega.type-b {
+  &:hover {
+  }
+
+  .menu-icon {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .sub-menu {
+    /* Mega Menu */
+    @include grid;
+    @include grid-template-columns(auto auto);
+  }
+
+  .sub-menu-list {
+    position: relative;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    margin-right: -20px;
+
+    > .menu-item {
+      > a {
+        /* Column header*/
+        white-space: nowrap;
+        display: block;
+        font-size: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+}

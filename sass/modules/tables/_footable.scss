@@ -1,0 +1,91 @@
+.footable {
+  background-color: #eee;
+
+  th, td {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media screen and (min-width: $size__large) {
+      text-align: center;
+    }
+
+    &:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
+
+    &:nth-child(even) {
+      background-color: #dbdbdb;
+    }
+  }
+
+  th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 700;
+
+    &:first-child {
+      background-color: $color__highlight;
+    }
+  }
+
+  td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    white-space: nowrap;
+
+    &:first-child {
+      @media screen and (min-width: $size__large) {
+        padding-left: 30px;
+        text-align: right;
+      }
+    }
+  }
+
+  .footable-visible {
+    position: relative;
+  }
+
+  .footable-toggle {
+    position: absolute;
+    top: 50%;
+    @include transform(translate(0%, -50%));
+    right: 20px;
+    width: 10px;
+    height: 10px;
+
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      border: 1px solid black;
+      width: 1px;
+      height: 100%;
+    }
+
+    &::before {
+      /* Horizontal*/
+      @include transform(rotate(90deg));
+      top: 0;
+      left: 4px;
+    }
+
+    &::after {
+      /* Vertical*/
+      @include transform(translate(-50%, 0%));
+      left: 50%;
+    }
+  }
+
+  .footable-detail-show .footable-toggle {
+    &::after {
+      display: none;
+    }
+  }
+
+  .footable-row-detail-name {
+    text-align: right;
+  }
+
+  .footable-row-detail-inner {
+    padding: 0;
+  }
+}

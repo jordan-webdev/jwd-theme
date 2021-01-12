@@ -1,0 +1,31 @@
+.alignleft {
+  display: block;
+  margin-right: 0;
+  margin-bottom: rem(15);
+
+  @media screen and (min-width: $breakpoint__dynamic-content) {
+    margin-right: rem(40);
+    margin-bottom: rem(5);
+    display: inline;
+    float: left;
+  }
+}
+
+.alignright {
+  display: block;
+  margin-left: 0;
+  margin-bottom: rem(15);
+
+  @media screen and (min-width: $breakpoint__dynamic-content) {
+    margin-left: rem(40);
+    margin-bottom: rem(5);
+    display: inline;
+    float: right;
+  }
+}
+
+.aligncenter {
+  clear: both;
+
+  @include center-block;
+}

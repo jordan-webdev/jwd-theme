@@ -1,0 +1,5 @@
+body.woocommerce-cart.page-template-default #page {
+  @import "message";
+  @import "table";
+  @import "totals";
+}

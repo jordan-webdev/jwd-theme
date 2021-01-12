@@ -1,0 +1,12 @@
+.go-to-top {
+  position: fixed;
+  z-index: 3;
+  right: rem(15);
+  bottom: 25%;
+  opacity: 0;
+  transition: opacity .3s;
+
+  &.active {
+    opacity: 1;
+  }
+}

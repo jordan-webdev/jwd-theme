@@ -1,0 +1,45 @@
+@mixin grid() {
+  display: -ms-grid;
+  display: grid;
+}
+
+@mixin inline-grid() {
+  display: -ms-inline-grid;
+  display: inline-grid;
+}
+
+@mixin grid-template-columns($cols) {
+  -ms-grid-columns: $cols;
+  grid-template-columns: $cols;
+}
+
+@mixin grid-template-rows($rows) {
+  -ms-grid-rows: $rows;
+  grid-template-rows: $rows;
+}
+
+@mixin grid-column-start($start) {
+  -ms-grid-column: $start;
+  grid-column-start: $start;
+}
+
+@mixin grid-column-end($end) {
+  -ms-grid-column-span: $end;
+  grid-column-end: $end;
+}
+
+@mixin grid-row-start($start) {
+  -ms-grid-row: $start;
+  grid-row-start: $start;
+}
+
+@mixin grid-row-end($end) {
+  -ms-grid-row-span: $end;
+  grid-row-end: $end;
+}
+
+@mixin column-gap($gap) {
+  -webkit-column-gap: $gap;
+  -moz-column-gap: $gap;
+  column-gap: $gap;
+}

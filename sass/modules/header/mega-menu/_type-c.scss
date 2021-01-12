@@ -1,0 +1,24 @@
+.is-mega.type-c {
+  > .sub-menu {
+    /* Mega Menu */
+    padding: 30px 35px;
+    background-color: #efefef;
+    @include grid;
+    grid-auto-columns: auto;
+    @include column-gap(30px);
+
+    > .menu-item {
+      @include grid-row-start(1);
+      padding: 15px;
+      background-color: white;
+
+      > a {
+        display: block;
+        font-family: $font__secondary;
+        line-height: 2;
+        font-size: 17px;
+        text-align: center;
+      }
+    }
+  }
+}

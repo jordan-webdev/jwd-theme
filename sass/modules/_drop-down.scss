@@ -1,0 +1,132 @@
+.drop-down {
+  //For z-index later, assigned through jQuery
+  position: relative;
+
+  @include flex-basis(auto);
+
+  //max-width: rem(240);
+  //z-index: 1;
+
+  &--full-width {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__btn {
+    @include flexbox;
+
+    width: 100%;
+    padding-left: rem(29);
+    padding-right: rem(29);
+  }
+
+  &__caret {
+    @include transform(rotate(0));
+
+    transition: transform 0.3s;
+
+    &.active {
+      @include transform(rotate(-180deg) !important);
+    }
+  }
+
+  &__sub-icon {
+    margin-right: rem(7);
+  }
+
+  &__list {
+    display: none;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    max-width: 100%;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    background-color: rgba($color__black, 0.6);
+
+    //border: 1px solid $color__highlight;
+    border: 1px solid rgba(white, 0.3);
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  &__item {
+    & + .drop-down__item {
+      margin-top: 0.8em;
+    }
+  }
+
+  & .not-clickable {
+    cursor: wait;
+
+    & a {
+      cursor: wait;
+    }
+  }
+
+  /* ======================================================== */
+  /* FILTERS DROPDOWN */
+  /* ======================================================== */
+
+  &--filters {
+    &__list {
+      padding-right: rem(18);
+      padding-top: 0;
+    }
+
+    &__all {
+      position: absolute;
+      top: rem(15);
+      right: rem(20);
+    }
+
+    &__item-label {
+      display: block;
+      margin-top: rem(15);
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      transition: border-bottom 0.3s, padding-bottom 0.3s;
+
+      &.is-active {
+        border-bottom: 1px dashed darken(white, 45%);
+        padding-bottom: rem(15);
+      }
+    }
+
+    &__sub-icon {
+      transition: transform 0.3s;
+
+      &.is-active {
+        @include transform(rotate(90deg));
+      }
+    }
+
+    &__sub-items {
+      max-height: rem(0);
+      overflow-y: hidden;
+      transition: max-height 0.5s;
+
+      &.is-active {
+        max-height: rem(150);
+      }
+    }
+
+    &__sub-item {
+      margin-left: rem(15);
+      margin-top: rem(15);
+      cursor: pointer;
+    }
+
+    &__check-box {
+      height: rem(15);
+      width: rem(15);
+      border: 1px solid darken(white, 40%);
+      margin-right: rem(10);
+      transition: background-color 0.3s;
+
+      &.is-active {
+        background-color: $color__primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.single-post {
+  .post-wrap {
+    max-width: 808px;
+    padding-top: $comm_padd;
+    padding-bottom: $comm_padd;
+
+    @media screen and (min-width: $size__large) {
+      padding-top: 75px;
+      padding-bottom: 155px;
+    }
+  }
+
+  .thumb {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: $size__large) {
+      margin-bottom: 66px;
+    }
+  }
+}

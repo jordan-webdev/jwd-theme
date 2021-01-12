@@ -1,0 +1,125 @@
+table.cart {
+  position: relative;
+  border: none;
+  border-top: rem(3) solid $color__primary;
+  border-radius: 0;
+  max-width: 100%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $size__large) {
+    width: 1000px;
+  }
+
+  thead {
+    th {
+      text-align: left;
+      padding: 13px 5px;
+      font-size: 12px;
+
+      @media screen and (min-width: $size__large) {
+        padding: 20px 5px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  td {
+    padding: 13px 10px;
+    vertical-align: top;
+
+    @media screen and (min-width: $size__large) {
+      padding: 20px 5px;
+    }
+
+    &.product-thumbnail {
+      img {
+        width: 150px;
+      }
+    }
+
+    &.product-name {
+      font-size: 11px;
+
+      @media screen and (min-width: $size__large) {
+        font-size: 13px;
+      }
+
+      &::before {
+        font-size: 14px;
+      }
+
+      .variation {
+        padding-left: 21px;
+      }
+    }
+
+    &.product-quantity {
+      padding-top: 4px;
+
+      @media screen and (min-width: $size__large) {
+        padding-top: 12px;
+      }
+    }
+  }
+
+  .product-remove {
+    /* TH and TD*/
+    display: none;
+
+    @media screen and (min-width: $size__large) {
+      display: table-cell;
+    }
+  }
+
+  .product-thumbnail {
+    /* TH and TD*/
+    display: none;
+
+    @media screen and (min-width: $size__large) {
+      display: table-cell;
+    }
+  }
+
+  .qty {
+    padding: 0 15px;
+    width: 67px;
+  }
+
+  .subtotal {
+    position: relative;
+  }
+
+  td.actions {
+    /* Coupon + update */
+
+    .coupon {
+      margin-bottom: 15px;
+      @include flexbox;
+      @include align-items(center);
+
+      label {
+        display: block;
+        margin-right: 15px;
+      }
+
+      .input-text {
+        height: 35px;
+        margin-right: 10px;
+        width: 160px;
+      }
+
+      .button {
+        width: auto !important;
+        margin-right: rem(0);
+      }
+    }
+
+    .button {
+      /* Update Button*/
+      background-color: transparent;
+      border: rem(1) solid $color__primary;
+    }
+  }
+}

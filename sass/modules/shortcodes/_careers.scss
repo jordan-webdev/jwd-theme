@@ -1,0 +1,41 @@
+.careers {
+  &__title {
+    color: $color__white;
+    background-color: $color__primary;
+    font-family: $font__secondary;
+    padding-left: rem(15);
+    padding-top: rem(5);
+    padding-bottom: rem(5);
+    font-size: rem(18);
+  }
+
+  &__list {
+    background-color: $color__grey;
+  }
+
+  &__list-item {
+    @include flexbox;
+    @include align-items(center);
+    padding-top: rem(15);
+    padding-bottom: rem(15);
+    margin-left: rem(15);
+    margin-right: rem(15);
+    border-bottom: rem(1) solid $color__med-grey;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__pdf-wrapper {
+    border-radius: rem(5);
+    padding-left: rem(7);
+    padding-right: rem(7);
+    margin-right: rem(10);
+    background-color: $color__primary;
+  }
+
+  &__pdf-text {
+    color: $color__white;
+  }
+}

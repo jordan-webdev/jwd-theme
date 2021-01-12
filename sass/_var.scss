@@ -1,0 +1,32 @@
+/*Colors*/
+$color__black: #353535;
+$color__dark-black: black;
+$color__green: green;
+$color__white: white;
+$color__primary: #0e3b38;
+$color__secondary: #b2954b;
+$color__tertiary: #004d42;
+$color__quaternary: #3e1016;
+$color__focus: #eee;
+$color__grey: #eee;
+$color__med-grey: #e2e2e2;
+$color__dark-grey: $color__tertiary;
+$color__highlight: $color__secondary;
+$color__link-hover: $color__highlight;
+
+/*Structure*/
+$comm_padd: 30px;
+$breakpoint__mobile-menu: rem(1168);
+$breakpoint__dynamic-content: rem(1000);
+$breakpoint__half-items: rem(850);
+$size__site-container: rem(1150);
+$size__site-padding: 20px;
+$size__site-padding-mobile: 20px;
+$size__medium: 40rem;
+$size__large: 64rem;
+
+/*Font Families*/
+$font__primary: "Montserrat", sans-serif;
+$font__secondary: "Cormorant", serif;
+$font__tertiary: "Roboto", sans-serif;
+$font__quaternary: "Roboto", sans-serif;

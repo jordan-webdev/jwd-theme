@@ -1,0 +1,97 @@
+.page-id-131 .forms {
+  form {
+    border: rem(1) solid $color__grey;
+    padding: rem(15);
+
+    @media screen and (min-width: $size__medium) {
+      padding: rem(20);
+    }
+
+    &:first-child {
+      margin-bottom: rem(25);
+
+      @media screen and (min-width: $size__medium) {
+        margin-bottom: rem(0);
+      }
+    }
+  }
+
+  .title {
+    font-family: $font__secondary;
+    font-size: rem(18);
+    padding-bottom: rem(14);
+    border-bottom: rem(1) solid $color__grey;
+  }
+
+  .text {
+    margin-top: rem(12);
+    margin-bottom: rem(15);
+    font-size: rem(15);
+
+    @media screen and (min-width: $size__medium) {
+      margin-bottom: rem(25);
+    }
+  }
+
+  .inputs {
+    margin-bottom: rem(15);
+
+    @media screen and (min-width: $size__medium) {
+      margin-top: rem(10);
+      margin-bottom: rem(35);
+    }
+  }
+
+  .field-wrap {
+    margin-bottom: rem(25);
+
+    label {
+      display: block;
+      margin-bottom: rem(7);
+      font-size: rem(16);
+    }
+
+    .required {
+      color: red;
+    }
+  }
+
+  .required-msg {
+    font-size: rem(13);
+    color: red;
+    display: block;
+    margin-top: rem(-13);
+  }
+
+  .btn {
+    margin-bottom: rem(15);
+  }
+
+  .sign-in-wrap {
+    text-align: center;
+  }
+
+  .remember {
+    display: block;
+    margin-bottom: rem(7);
+    font-size: rem(14);
+    @include flexbox;
+    @include align-items(flex-end);
+    @include justify-content(center);
+
+    input {
+      margin-left: rem(0);
+      margin-top: rem(0);
+      margin-bottom: rem(0);
+      margin-right: rem(6);
+    }
+  }
+
+  .remember-text {
+    line-height: .8;
+  }
+
+  .forgot-pass {
+    font-size: rem(14);
+  }
+}

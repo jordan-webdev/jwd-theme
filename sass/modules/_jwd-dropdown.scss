@@ -1,0 +1,56 @@
+.jwd-dropdown {
+  display: none;
+}
+
+.jwd-dde {
+  position: relative;
+
+  &__selected {
+    width: 100%;
+    padding: rem(8) rem(12);
+    border: rem(1) solid $color__med-grey;
+  }
+
+  &__selected-inner {
+    width: 100%;
+    @include flexbox;
+    @include justify-content(space-between);
+    @include align-items(center);
+  }
+
+  &__icon {
+    margin-left: rem(15);
+  }
+
+  &__list {
+    position: absolute;
+    z-index: 2;
+    left: -9999px;
+    top: 100%;
+    background-color: #f8f8f8;
+    border: rem(1) solid #dedede;
+    min-width: 100%;
+
+    &.active {
+      left: rem(0);
+    }
+  }
+
+  &__item {
+    border-bottom: rem(1) solid $color__grey;
+
+    &:hover {
+      background-color: $color__white;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__item-btn {
+    text-align: left;
+    padding: rem(8) rem(12);
+    width: 100%;
+  }
+}
